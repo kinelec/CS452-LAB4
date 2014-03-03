@@ -112,9 +112,9 @@ void display(SDL_Window* screen){
   	trans = glm::rotate(trans,yaw,glm::vec3(0,1,0));//rotate arround y axis
   	trans = glm::scale(trans,glm::vec3(scalar));//scaling
 	GLfloat amb[]={0.7f,0.7f,0.7f,1.0f};
-	GLfloat light1d[] = {20.0f, 20.0f, 20.0f};
+	GLfloat light1d[] = {20.0f, 0.0f, 20.0f};
   	GLfloat light1c[] = {0.1f, 0.1f, 0.1f};
-  	GLfloat light2d[] = {-20.0f, -20.0f, -20.0f};
+  	GLfloat light2d[] = {-20.0f, 0.0f, -20.0f};
   	GLfloat light2c[] = {0.1f, 0.1f, 0.1f};
     
 	//transformation matrix
