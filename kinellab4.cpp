@@ -1,3 +1,4 @@
+#define GLM_FORCE_RADIANS
 #include "initShaders.h"
 #include <cstdlib>
 using namespace std;
@@ -25,14 +26,14 @@ GLfloat vertices[]={
 					};
 
 GLfloat colors[]={
-	0.0f,0.0f,1.0f,1.0f,
-	1.0f,0.0f,1.0f,1.0f,
-	0.0f,0.5f,1.0f,1.0f,
-	1.0f,0.5f,0.0f,1.0f,
-	0.5f,1.0f,0.0f,1.0f,
 	1.0f,0.0f,0.0f,1.0f,
-	0.5f,0.0f,1.0f,1.0f,
-	1.0f,0.0f,0.5f,1.0f						
+	1.0f,0.0f,0.0f,1.0f,
+	1.0f,0.0f,0.0f,1.0f,
+	1.0f,0.0f,0.0f,1.0f,
+	1.0f,0.0f,0.0f,1.0f,
+	1.0f,0.0f,0.0f,1.0f,
+	1.0f,0.0f,0.0f,1.0f,
+	1.0f,0.0f,0.0f,1.0f						
 	              		};
 
 GLfloat norms[]={
@@ -112,10 +113,10 @@ void display(SDL_Window* screen){
   	trans = glm::rotate(trans,yaw,glm::vec3(0,1,0));//rotate arround y axis
   	trans = glm::scale(trans,glm::vec3(scalar));//scaling
 	GLfloat amb[]={0.7f,0.7f,0.7f,1.0f};
-	GLfloat light1d[] = {20.0f, 0.0f, 20.0f};
-  	GLfloat light1c[] = {0.1f, 0.1f, 0.1f};
-  	GLfloat light2d[] = {-20.0f, 0.0f, -20.0f};
-  	GLfloat light2c[] = {0.1f, 0.1f, 0.1f};
+	GLfloat light1d[] = {20.0f, 10.0f, 10.0f};
+  	GLfloat light1c[] = {0.3f, 0.3f, 0.3f};
+  	GLfloat light2d[] = {-20.0f, 10.0f, -10.0f};
+  	GLfloat light2c[] = {0.3f, 0.3f, 0.3f};
     
 	//transformation matrix
   	GLint tmpLocation = glGetUniformLocation(prog,"modelMatrix");
